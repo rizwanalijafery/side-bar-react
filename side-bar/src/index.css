@@ -1,13 +1,208 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*html, body{*/
+/*  height: 100vh;*/
+/*}*/
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #fff;
 }
+
+/*.main{*/
+/*  display: flex;*/
+/*  height: 90vh;*/
+/*}*/
+.main-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+/*.main-content*/
+/*{*/
+/*  max-width: 1200px;*/
+/*  width: 100%;*/
+/*  background-image: url('./cloudtek.jpg');*/
+/*  !*background-image: radial-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .8)), url('./cloudtek.jpg');*!*/
+
+/*  background-size: contain;*/
+/*  background-position: center;*/
+/*  background-repeat: no-repeat;*/
+/*}*/
+  .header
+  {
+    max-width: 100%;
+    height: 10vh;
+    background-color: cadetblue;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .leftHeader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 20px;
+    width: 20%;
+    max-width: 100%;
+  }
+  .leftHeader i{
+    font-size: 40px;
+  }
+
+.rightHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*padding-left: 20px;*/
+  width: 20%;
+  max-width: 100%;
+}
+.rightHeader   h1 {
+ margin-right: 10px;
+}
+.rightHeader  i{
+ font-size: 40px;
+}
+.container{
+  max-width: 100%;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 90vh;
+ overflow: auto;
+}
+
+.content-page
+{
+  padding: 100px 100px;
+}
+.title{
+  font-size: 3em;
+}
+.info{
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 1.5em;
+  color: rgb(224, 224, 224);
+}
+.btn{
+  margin: 0 auto;
+  border: none;
+  outline: none;
+  padding: .75em 1em;
+  font-size: 1em;
+  letter-spacing: 1px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .4);
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 3px;
+  background-color: rgb(134, 49, 0);
+  color: #fff;
+}
+
+/*.sidebar{*/
+
+/*  flex-shrink: 0;*/
+/*  background-color: rgba(22, 22, 22, 1);*/
+/*  !*background-color: yellow;*!*/
+/*  !*height: 90vh;*!*/
+/*  max-width: 250px;*/
+/*  width: 100%;*/
+/*  !*overflow: scroll;*!*/
+/*}*/
+.sidebar.opened{
+  width: 100%;
+  flex-shrink: 0;
+  /*display: inline-block;*/
+  background-color: rgba(22, 22, 22, 1);
+  /*background-color: red;*/
+  height: 90vh;
+  max-width: 250px;
+
+}
+/*.hidden{*/
+/*  display: none;*/
+/*  background-color: green;*/
+/*  height: 90vh;*/
+/*  max-width: 100px;*/
+/*  width: 100%;*/
+/*  overflow: hidden;*/
+/*}*/
+
+
+.sidebar-item{
+  padding: .75em 1em;
+  display: block;
+  transition: background-color .15s;
+  border-radius: 5px;
+}
+.sidebar-item:hover{
+  /*background-color: rgba(255, 255, 255, .1);*/
+}
+
+.sidebar-title{
+  display: flex;
+  font-size: 1.2em;
+  justify-content: space-between;
+}
+.sidebar-title a{
+  color: white;
+}
+
+.sidebar-title span i{
+  display: inline-block;
+  width: 1.5em;
+  color: white;
+}
+.sidebar-title .toggle-btn{
+  cursor: pointer;
+  transition: transform .3s;
+}
+.sidebar-item.open > .sidebar-title .toggle-btn{
+  transform: rotate(180deg);
+}
+.sidebar-content{
+  padding-top: .25em;
+  height: 0;
+  /*overflow: hidden;*/
+}
+.sidebar-content a
+{
+  color: white;
+}
+.sidebar-item.open {
+
+}
+.sidebar-item.open > .sidebar-content{
+  height: auto;
+}
+
+.sidebar-item.plain a{
+  color: #fff;
+  /*text-decoration: none;*/
+  list-style: none;
+}
+.sidebar-item.plain:hover{
+  text-decoration: underline;
+}
+.sidebar-item.plain i{
+  display: inline-block;
+  width: 1.7em;
+  color: white;
+}
+
+
+/*.sidebar-menu*/
+/*{*/
+/*  display: flex;*/
+/*}*/
