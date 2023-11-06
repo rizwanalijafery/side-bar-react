@@ -7,19 +7,16 @@ import {BrowserRouter} from "react-router-dom";
 import Routing from "./Components/Content";
 // import Test from "./Components/test";
 // import {useState} from "react";
+import Content from "./Components/Content";
 function App() {
-
 
     return(
         <div>
-            <BrowserRouter>
-                <Routing></Routing>
-            <Dashboard></Dashboard>
 
+            <BrowserRouter>
+                <Dashboard></Dashboard>
             </BrowserRouter>
-            {/*<Header></Header>*/}
-            {/*<Sidebar />*/}
-            {/*<Main/>*/}
+
         </div>
 
     )

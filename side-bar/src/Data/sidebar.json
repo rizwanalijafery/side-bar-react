@@ -2,7 +2,7 @@
   {
     "title": "General",
     "icon": "bi-gear-fill",
-    "path": "/",
+    "path": "/general",
     "childrens": [
       {
         "title": "Home",
@@ -51,6 +51,10 @@
       {
         "title": "Login",
         "path": "/account/login"
+      },
+      {
+        "title": "Employees",
+        "path": "/account/Employees"
       },
       {
         "title": "Register",

@@ -2,19 +2,20 @@
 // import items from "../Data/sidebar.json"
 import React, {useState} from "react";
 import Sidebar from "./Sidebar";
+import {Link} from "react-router-dom";
 // import Sidebar from "./Sidebar";
 // const [navOpen , setNavOpen] = useState(false)
 // const toggleNav = () =>{
 //     setNavOpen(!navOpen)
 // }
-export default function Header({toggleMenubar}){
+export default function Header(){
 // const {toggleMenubar} = props
     return (
       <div className={'main-container'}>
           <div className="header">
           <div className="leftHeader">
               <h1>Dash Board</h1>
-              <a href = "#"><i className="bi bi-list" onClick={()=> toggleMenubar()}></i></a>
+              <a href = "#"><i className="bi bi-list" ></i></a>
 
           </div>
               <div className="centerheader">
@@ -22,8 +23,8 @@ export default function Header({toggleMenubar}){
 
               </div>
           <div className="rightHeader">
-              <h1>Login</h1>
-              <a href = "#"><i className="bi bi-person-fill"></i></a>
+              <Link to={"/account/login"}><h1>Login</h1></Link>
+              <Link to={"/account/login"}><i className="bi bi-person-fill"></i></Link>
           </div>
 
       </div>

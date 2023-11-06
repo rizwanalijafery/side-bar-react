@@ -12,18 +12,26 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import Forgot from "../Pages/ForgotPassword";
 import Reset from "../Pages/ResetPassword";
+import Main from "./Main";
+import Employees from "../Pages/Employees";
+import EditUser from "../Pages/EditUser";
+import DeleteUser from "../Pages/DeleteUser";
 
 function Content() {
     return (
         <div className={'main-content'}>
             <Routes>
+                <Route path={'/'} element={<Main/>}/>
                 <Route path={'/general'} element={<General/>}/>
                 <Route path={'general/home'} element={<Home/>}/>
                 <Route path={'general/about'} element={<About/>}/>
                 <Route path={'general/contact'} element={<Contact/>}/>
                  <Route path={'general/faq'} element={<FAQ/>}/>
                 <Route path={ '/account'} element = {<Account/>}/>
-                <Route path={ '/account/login'} element = {<Login/>}/>
+                <Route path={ '/account/login'} element = {<Login/>}/>\
+                <Route path={ '/account/Employees'} element = {<Employees/>}/>
+                <Route path={ '/account/Employees/edit/:id'} element = {<EditUser/>}/>
+                <Route path={ '/account/Employees/delete/:id'} element = {<DeleteUser/>}/>
                 <Route path={ '/account/register'} element = {<Register/>}/>
                 <Route path={ 'account/forgot-password'} element = {<Forgot/>}/>
                 <Route path={ 'account/reset-password'} element = {<Reset/>}/>
